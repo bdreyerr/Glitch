@@ -179,15 +179,3 @@ struct Waveform: View {
     }
 }
 
-// Add Preview if it doesn't exist or update existing one
-#Preview {
-    Waveform(
-        currentTime: 15.0, // Example current time for preview
-        totalDuration: 60.0, // Example total duration for preview
-        onSeek: { time in print("Preview seeked to: \(time)") }, // Example seek action
-        onScrubEnd: { print("Preview scrub ended") } // Example scrub end action
-    )
-        .environmentObject(ThemeViewModel()) // Inject ThemeViewModel for Preview
-        .padding()
-        .background(ThemeViewModel().backgroundColor) // Set preview background
-}

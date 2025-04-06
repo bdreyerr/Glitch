@@ -95,6 +95,9 @@ struct AudioCard: View {
             .onAppear(perform: loadAudio)
             // Invalidate timer when the view disappears
             .onDisappear(perform: stopTimer)
+            .onChange(of: currentTime) {
+                print("timer changed: ", currentTime)
+            }
         }
     }
     
@@ -127,6 +130,7 @@ struct AudioCard: View {
         // Update the currentTime state immediately for UI responsiveness
         self.currentTime = clampedTime
         print("[AudioCard] Set currentTime to \(clampedTime)")
+        self.startTimer()
         
         // Note: Scrubbing end is now detected via the onScrubEnd callback from Waveform
     }

@@ -21,6 +21,8 @@ struct GlitchContainerView: View {
                 // Sidebar
                 SidebarView(viewModel: sidebarViewModel)
                 
+                SubSidebar(viewModel: sidebarViewModel)
+                
                 // Main Content
                 MainContentView(viewModel: sidebarViewModel)
             }
