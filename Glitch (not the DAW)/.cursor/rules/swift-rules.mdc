@@ -1,0 +1,24 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+## Architecture and Structure
+
+1. **MVVM Architecture**
+   - Implement strict MVVM separation (Model, ViewModel, View)
+   - ViewModels should conform to `ObservableObject`
+   - Models should be independent of UI concerns
+   - Views should be thin and presentation-focused
+
+2. **File Organization**
+   - Group files by feature rather than type
+   - Keep views and their associated ViewModels in the same directory
+   - Create dedicated directories for reusable components
+   - Separate audio engine components from UI components
+
+3. **Naming Conventions**
+   - Views should end with "View" (e.g., `TrackView`)
+   - ViewModels should end with "ViewModel" (e.g., `TrackViewModel`)
+   - Models should have clear domain names (e.g., `AudioTrack`)
+   - Extensions should be in separate files with descriptive names
